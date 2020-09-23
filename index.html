@@ -11,6 +11,7 @@
 <!-- This is a Semantic HTML Change; change "div" tag to "nav" for navigation bar -->
     <nav class="menu">
         <ul>
+            <!-- This is an A11y Change; increased size of navigation bar font in CSS -->
             <li><a href="/">Homepage</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="login.html">Login</a></li>
@@ -29,8 +30,9 @@
         <div class="page-area">
 
             <div class="text-box">
-                <!-- This is a Semantic HTML Change; h3 tag instead of h1 -->
+                <!-- This is a Semantic HTML Change; h3 tag instead of h1 (also applies to a11y changes mentioned above) -->
                 <h3>Stay on track</h3>
+                <!-- This is an A11y Change; heading levels are written in a logical sequence and are not skipped -->
                 <p>
                     Do you know where you are spending your money? If you really stop to track it down,
                     you would get surprised! Proper budget management depends on real data... and this
@@ -41,6 +43,7 @@
             <div class="text-box">
                 <h3>Alerts</h3>
                 <p>
+                    <!-- This is an A11y Change; increased font size for readability in CSS -->
                     What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
                 </p>
             </div>
@@ -96,12 +99,12 @@
         </div>
 
     </div>
-
-    <div class="bottom">
+<!-- This is a Semantic HTML Change; using footer tag instead of div -->
+    <footer class="bottom">
         <div class="center">
             All rights reserved &copy; Fabio Nolasco
         </div>
-    </div>
+    </footer>
 
 </body>
 </html>
