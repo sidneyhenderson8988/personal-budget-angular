@@ -63,6 +63,10 @@ header.header h2 {
     color: #4d5791;
 }
 
+h3 {
+    font-size: 2em;
+}
+
 .container {
     padding: 40px;
     width: 100%;
