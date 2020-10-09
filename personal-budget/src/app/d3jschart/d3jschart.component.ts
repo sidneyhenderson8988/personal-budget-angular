@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
+import { DataService } from '../service/data.service';
+import { HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'pb-d3jschart',
@@ -17,7 +19,27 @@ export class D3jschartComponent implements OnInit {
     {title: 'Yard Service', budget: '20'},
     {title: 'Car Payment', budget: '85'}
   ];
+  // public dataSource = {
+//     datasets: [
+//         {
+//             data: [],
+//             backgroundColor: [
+//                 '#ffcd56',
+//                 '#ff6384',
+//                 '#36a2eb',
+//                 '#fd6b19',
+//                 '#2bcf57',
+//                 '#db1414',
+//                 '#8c27cf',
+//             ],
+//         }
+//     ],
 
+// // These labels appear in the legend and in the tooltips when hovering different arcs
+// labels: []
+// };
+
+  // private data = [];
   private svg;
   private margin = 50;
   private width = 750;
@@ -77,12 +99,27 @@ private drawChart(): void {
   .style('font-size', 15);
 }
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
 
   ngOnInit(): void {
+
     this.createSvg();
     this.createColors();
     this.drawChart();
   }
 
+
+  // tslint:disable-next-line: use-lifecycle-interface
+  ngAfterViewInit(): void {
+    // this.http.get('http://localhost:3000/budget')
+    // .subscribe((data: any) => {
+    //   // tslint:disable-next-line: no-var-keyword
+    //   for (var i = 0; i < data.myBudget.length; i++){
+    //     this.dataSource.datasets[0].data[i] = data.myBudget[i].budget;
+    //     this.dataSource.labels[i] = data.myBudget[i].title;
+
+    //   }
+    // });
+  }
 }
